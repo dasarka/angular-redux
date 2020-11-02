@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-4 mx-auto">
+        <form [formGroup]="loginForm" (ngSubmit)="onLoggedIn()">
+            <label for="username">
+                User Name:
+                <input id="username" type="text" formControlName="username" />
+            </label>
+            <label for="password">
+                Password:
+                <input id="password" type="password" formControlName="password" />
+            </label>
+            <button class="text-center btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>

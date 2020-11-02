@@ -1,0 +1,19 @@
+<h1>Training Details</h1>
+<br />
+<a routerLink="/dashboard">Return dashboard</a>
+<br />
+<a routerLink="/login">Logout</a>
+<hr />
+<ng-container *ngIf="selectedTraining">
+    <h3>Title: {{selectedTraining.title}}</h3>
+    <h5>Author: {{selectedTraining.author}}</h5>
+    <h6>Created On: {{selectedTraining.createdOn}}</h6>
+    <hr />
+    <p>Status: {{selectedTraining.status}}</p>
+    <p>Progress: {{selectedTraining.progress}}%</p>
+    <hr />
+    Contents:
+    <ul *ngFor="let content of selectedTraining.content">
+        <li>{{content}}</li>
+    </ul>
+</ng-container>
